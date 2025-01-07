@@ -1,1 +1,22 @@
-test
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Orders</title>
+    <script src="https://lci1--dealersite.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+    <script>
+        $Lightning.use("orderLightningOutApp", function() {
+            $Lightning.createComponent(
+                "c:orderLightningOut",
+                {},
+                "lightningContainer",
+                function(cmp) {
+                    console.log("Component created:", cmp);
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <div id="lightningContainer"></div>
+</body>
+</html>
